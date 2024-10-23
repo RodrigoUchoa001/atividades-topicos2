@@ -33,8 +33,6 @@ def salvar_imagem_histograma(imagem, titulo_imagem, titulo_histograma, pasta, no
 
 
 
-# 
-
 # lendo a img
 imagem_colorida = cv2.imread("Prática - Processamento e análise de formas/imagem.jpg", cv2.IMREAD_COLOR)
 
@@ -43,6 +41,7 @@ imagem_cinza = cv2.cvtColor(imagem_colorida, cv2.COLOR_BGR2GRAY)
 
 
 
+# 
 # Questão 1 - T(r) produz o negativo de uma imagem
 pasta_questao = os.path.join(base_path, "questao_negativo")
 
@@ -55,9 +54,6 @@ salvar_imagem_histograma(negativo, 'Imagem Negativa', 'Histograma da Imagem Nega
 
 
 # 
-
-
-
 # Questão 2 - T(r) = r + k, com valores crescentes e negativos de k
 pasta_questao = os.path.join(base_path, "questao_r_mais_k")
 
@@ -74,8 +70,6 @@ for k in [-100, 0, 50, 100]:
 
 
 # 
-
-
 # Questão 3 - T(r) = log(r)
 pasta_questao = os.path.join(base_path, "questao_log")
 
@@ -93,8 +87,6 @@ salvar_imagem_histograma(imagem_log, 'Imagem com T(r) = log(r)', 'Histograma com
 
 
 # 
-
-
 # Questão 4 - T(r) = exp(r)
 pasta_questao = os.path.join(base_path, "questao_exp")
 
@@ -108,9 +100,3 @@ imagem_exp = transform_exp(imagem_cinza)
 
 # Salvar a imagem exponencial e seu histograma
 salvar_imagem_histograma(imagem_exp, 'Imagem com T(r) = exp(r)', 'Histograma com T(r) = exp(r)', pasta_questao, 'exp')
-
-
-
-# 
-
-
